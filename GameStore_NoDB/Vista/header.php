@@ -7,19 +7,24 @@ require_once '../Modelo/memoria.php'; // Ensures session and data are initialize
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore+ (No DB)</title>
+    <title>GameStore+ | Modern Gaming</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { padding-top: 56px; }
-        .footer { background-color: #f8f9fa; padding: 20px 0; }
-    </style>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.php">GameStore+ (No DB)</a>
+        <a class="navbar-brand" href="index.php">GameStore+</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +33,7 @@ require_once '../Modelo/memoria.php'; // Ensures session and data are initialize
                 <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="catalogo.php">Catálogo</a></li>
                 <?php if (isset($_SESSION['id_usuario'])): ?>
-                    <li class="nav-item nav-link text-white">Hola, <?php echo htmlspecialchars($_SESSION['nombre']); ?></li>
+                    <li class="nav-item nav-link text-white-50">Hola, <?php echo htmlspecialchars($_SESSION['nombre']); ?></li>
                     <?php if ($_SESSION['rol'] === 'cliente'): ?>
                         <li class="nav-item"><a class="nav-link" href="carrito.php">Carrito</a></li>
                         <li class="nav-item"><a class="nav-link" href="mis_compras.php">Mis Compras</a></li>
@@ -49,4 +54,4 @@ require_once '../Modelo/memoria.php'; // Ensures session and data are initialize
     </div>
 </nav>
 
-<div class="container mt-4">
+<div class="container mt-5 mb-5">
